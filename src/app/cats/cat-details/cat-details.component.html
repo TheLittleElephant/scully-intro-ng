@@ -1,0 +1,6 @@
+<button (click)="toggleImage()">{{ buttonText }}</button>
+
+<div *ngIf="cat$ | async as cat" class="cat">
+  <img *ngIf="showImage" [src]="cat.image" [alt]="cat.name">
+  <p>{{ cat.name }}</p>
+</div>
